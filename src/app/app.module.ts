@@ -13,6 +13,7 @@ import {PostService} from './post.service';
 import { HttpModule } from '@angular/http';
 import { PortadaPostComponent } from './portada-post/portada-post.component';
 import { PortadaPostService } from './portada-post.service';
+import { ComentsComponent } from './coments/coments.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PortadaPostService } from './portada-post.service';
     PostComponent,
     ContactoComponent,
     PortadaComponent,
-    PortadaPostComponent
+    PortadaPostComponent,
+    ComentsComponent
   ],
   imports: [
     BrowserModule,
