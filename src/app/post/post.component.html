@@ -1,4 +1,4 @@
-<div *ngFor = "let post of Posts">
+<div *ngFor = "let post of Post | slice:0:5">
   <h2> {{ post.title }} </h2>
   <p> {{ post.body }}</p>
 </div>
