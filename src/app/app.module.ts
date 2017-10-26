@@ -11,6 +11,8 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { PortadaComponent } from './portada/portada.component';
 import {PostService} from './post.service';
 import { HttpModule } from '@angular/http';
+import { PortadaPostComponent } from './portada-post/portada-post.component';
+import { PortadaPostService } from './portada-post.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { HttpModule } from '@angular/http';
     NosotrosComponent,
     PostComponent,
     ContactoComponent,
-    PortadaComponent
+    PortadaComponent,
+    PortadaPostComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,9 @@ import { HttpModule } from '@angular/http';
     HttpModule
   ],
   providers: [
-    PostService
+    PostService,
+    PortadaPostService
+    
   ],
   bootstrap: [AppComponent]
 })
