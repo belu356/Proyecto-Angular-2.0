@@ -15,6 +15,7 @@ import { PortadaPostComponent } from './portada-post/portada-post.component';
 import { PortadaPostService } from './portada-post.service';
 import { ComentsComponent } from './coments/coments.component';
 import { PostListComponent } from './post-list/post-list.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { PostListComponent } from './post-list/post-list.component';
     PortadaComponent,
     PortadaPostComponent,
     ComentsComponent,
-    PostListComponent
+    PostListComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

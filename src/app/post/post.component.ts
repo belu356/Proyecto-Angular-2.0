@@ -13,12 +13,13 @@ import { CommentsService } from '../coments.service';
 })
 export class PostComponent implements OnInit {
 
+
   
   comments: Array<any>= [];
-    Post:Array<any>;
+    
   
-
-  post: Post[];
+  post:any;
+ 
   
           
     
