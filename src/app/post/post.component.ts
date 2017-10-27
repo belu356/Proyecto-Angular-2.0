@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import {Post} from '../post';
 import {Observable} from 'rxjs/Observable';
 import { CommentsService } from '../coments.service';
+import { Comments } from '../comments';
 
 
 @Component({
@@ -13,20 +14,15 @@ import { CommentsService } from '../coments.service';
 })
 export class PostComponent implements OnInit {
 
-
-  
-  //comments: Array<any>= [];
-   //private comment: CommentsService) 
-    
-  
-  post:Post;
- 
   
           
+    post:Post;
+    comments:Comments[];
     
   
     constructor(private postServicio: PostService,
-      private activatedRoute: ActivatedRoute){}
+      private activatedRoute: ActivatedRoute,
+      private comment: CommentsService){}
     
   
     ngOnInit() {
@@ -39,9 +35,11 @@ export class PostComponent implements OnInit {
         this.post = post;
       });
 
-     // this.comment.getCommentsByPostId(id).subscribe(
-       // r=> this.comment = r
-      //);
+     this.comment.getCommentsByPostId(id).subscribe(comments=>{
+       this.comments = comments.json();
+     }
+    
+      );
     }
   }
   

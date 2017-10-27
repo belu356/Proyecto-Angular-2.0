@@ -18,6 +18,7 @@ import { PostListComponent } from './post-list/post-list.component';
 import { FooterComponent } from './footer/footer.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { RegistroComponent } from './registro/registro.component';
+import { CommentsService } from './coments.service';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { RegistroComponent } from './registro/registro.component';
     HttpModule
   ],
   providers: [
+    CommentsService,
     PostService,
     PortadaPostService
     
