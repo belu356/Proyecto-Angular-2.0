@@ -7,13 +7,19 @@ import {Post} from './post';
 @Injectable()
 export class PostService {
 
-  constructor(private http:Http) { }
+  constructor(private http: Http) { }
 
-  getPost():Observable<Post[]> {
+  getPosts():Observable<Post[]> {
     return this.http.get('https://jsonplaceholder.typicode.com/posts')
     .map(function (data){
       return data.json();
     });
-
   }
-}
+  
+  getPost(id: number):Observable<Post>{
+    return this.http.get('https://jsonplaceholder.typicode.com/posts/' + id )
+    .map(data=> data.json());
+
+    }
+  }
+

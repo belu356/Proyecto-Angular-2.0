@@ -19,7 +19,7 @@ export class PostComponent implements OnInit {
    //private comment: CommentsService) 
     
   
-  post:any;
+  post:Post;
  
   
           
@@ -35,7 +35,7 @@ export class PostComponent implements OnInit {
       });
     }
     private getPost(id: number) {
-      this.postServicio.getPost().subscribe(post =>{
+      this.postServicio.getPost(id).subscribe(post =>{
         this.post = post;
       });
 
