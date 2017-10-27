@@ -7,6 +7,16 @@
   
 </div>
 
+<div>
+  <h2>Comentarios ({{comments.length}})</h2>
+<div *ngFor="let comment of comments">
+  <strong>{{ comment.email }}</strong> said: <br>
+  <h4>{{ comment.name }}</h4>
+  <p>{{ comment.body }}</p>
+</div>
+
+</div>
+
 <div *ngIf="!post">
   oops
 </div>

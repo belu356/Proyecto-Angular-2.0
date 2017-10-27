@@ -1,13 +1,21 @@
 import { Injectable } from '@angular/core';
-import {Http} from '@angular/http';
-import {Observable} from 'rxjs/Observable';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
 
 @Injectable()
-export class ComentsService {
+export class CommentsService {
 
-  constructor(private http: Http) { }
-  etAll():Observable<any>{
-    return this.http.get('https://jsonplaceholder.typicode.com/comments');
+    endpoint = "https://jsonplaceholder.typicode.com/comments";
 
-}
+    constructor(private http: Http) { }
+
+    getAll() {
+        return this.http.get(this.endpoint)
+            .map(response => response.json());
+    }
+
+    getCommentsByPostId(id) {
+        return this.http.get(this.endpoint + '?postId=' + id)
+            .map(response => response.json());
+    }
 }

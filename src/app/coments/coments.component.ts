@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ComentsService} from '../coments.service';
+import {CommentsService} from '../coments.service';
 
 
 
@@ -12,7 +12,7 @@ import {ComentsService} from '../coments.service';
 export class ComentsComponent implements OnInit {
 coment: any;
 ComentsService: any;
-constructor (private comentService: ComentsService) {}
+constructor (private comentService: CommentsService) {}
    
   ngOnInit() {
   

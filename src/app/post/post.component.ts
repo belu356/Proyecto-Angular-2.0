@@ -3,6 +3,8 @@ import {PostService} from '../post.service';
 import { ActivatedRoute } from '@angular/router';
 import {Post} from '../post';
 import {Observable} from 'rxjs/Observable';
+import { CommentsService } from '../coments.service';
+
 
 @Component({
   selector: 'app-post',
@@ -11,7 +13,9 @@ import {Observable} from 'rxjs/Observable';
 })
 export class PostComponent implements OnInit {
 
-  Post:Array<any>;
+  
+  comments: Array<any>= [];
+    Post:Array<any>;
   
 
   post: Post[];
@@ -20,7 +24,8 @@ export class PostComponent implements OnInit {
     
   
     constructor(private postServicio: PostService,
-      private activatedRoute: ActivatedRoute) {}
+      private activatedRoute: ActivatedRoute,
+      private comment: CommentsService) {}
     
   
     ngOnInit() {
@@ -32,6 +37,10 @@ export class PostComponent implements OnInit {
       this.postServicio.getPost().subscribe(post =>{
         this.post = post;
       });
+
+      this.comment.getCommentsByPostId(id).subscribe(
+        r=> this.comment = r
+      );
     }
   }
   
