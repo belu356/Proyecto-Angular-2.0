@@ -1,0 +1,7 @@
+<div *ngFor="let post of post | slice:0:10">
+  <a href="" [routerLink]="['/post', post.id]"> 
+    {{post.title}} </a>
+   <p>   {{post.body}}
+    </p> 
+  
+</div>
