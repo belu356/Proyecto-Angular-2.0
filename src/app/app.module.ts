@@ -16,6 +16,8 @@ import { PortadaPostService } from './portada-post.service';
 import { ComentsComponent } from './coments/coments.component';
 import { PostListComponent } from './post-list/post-list.component';
 import { FooterComponent } from './footer/footer.component';
+import { PaginationComponent } from './pagination/pagination.component';
+import { RegistroComponent } from './registro/registro.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { FooterComponent } from './footer/footer.component';
     PortadaPostComponent,
     ComentsComponent,
     PostListComponent,
-    FooterComponent
+    FooterComponent,
+    PaginationComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,

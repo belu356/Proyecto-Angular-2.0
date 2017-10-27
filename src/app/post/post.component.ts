@@ -15,7 +15,8 @@ export class PostComponent implements OnInit {
 
 
   
-  comments: Array<any>= [];
+  //comments: Array<any>= [];
+   //private comment: CommentsService) 
     
   
   post:any;
@@ -25,8 +26,7 @@ export class PostComponent implements OnInit {
     
   
     constructor(private postServicio: PostService,
-      private activatedRoute: ActivatedRoute,
-      private comment: CommentsService) {}
+      private activatedRoute: ActivatedRoute){}
     
   
     ngOnInit() {
@@ -39,9 +39,9 @@ export class PostComponent implements OnInit {
         this.post = post;
       });
 
-      this.comment.getCommentsByPostId(id).subscribe(
-        r=> this.comment = r
-      );
+     // this.comment.getCommentsByPostId(id).subscribe(
+       // r=> this.comment = r
+      //);
     }
   }
   
