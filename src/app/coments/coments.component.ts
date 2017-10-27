@@ -9,7 +9,7 @@ import {ComentsService} from '../coments.service';
 })
 export class ComentsComponent implements OnInit {
 
-  coment: Coment;
+
   constructor() { }
 
   ngOnInit() {
