@@ -9,7 +9,7 @@ import {PortadaPostService} from '../portada-post.service'
 export class PortadaPostComponent implements OnInit {
 
 
-  portadaPost: any;
+  portadaPost: string;
 
   constructor(private portada: PortadaPostService) { }
 
