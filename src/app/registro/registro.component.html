@@ -1,31 +1,30 @@
 <h2>Registrate!</h2>
 <div class="row">
   <div class="col-8">
-      <form>
-        <div class="form-group"> 
-            <div class="form-group">
-              
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre">
-              </div>
-              <div class="form-group">
-                
-                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Apellido">
-              </div>
-          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-          <small id="emailHelp" class="form-text text-muted">No compartiremos tu email con nadie.</small>
+      <form [formGroup]="form">
+          <div class="form-group"> 
+            <input type="text" class="form-control" id="nombre" placeholder="Nombre" formControlName="nombre">
+              <span class="form-text form-validation" *ngIf="form.get('nombre').errors?.required && form.get('nombre').touched">Campo requerido</span>
+          </div> 
+
+          <div class="form-group">
+                <input type="text" class="form-control" id="apellido" placeholder="Apellido" formControlName="apellido">
+                <span class="form-text form-validation" *ngIf="form.get('apellido').errors?.required && form.get('apellido').touched">Campo requerido</span>
+           </div>
+
+          <div class="form-group">
+            <input type="email" class="form-control" id="email" placeholder="Email" formControlName="email">
+            <span class="form-text text-muted form validation" *ngIf="false">Error</span>
         </div>
 
         <div class="form-group">
-            <label>Crear ususario</label>
-            <input type="email" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
-          </div>
+            <input type="text" class="form-control" id="usuario" placeholder="Usuario" formControlName="usuario">
+            <span class="form-text form-validation" *ngIf="form.get('nombre').errors?.required && form.get('usuario').touched">Campo requerido</span>
+        </div> 
+          
         <div class="form-group">
-          <label for="exampleSelect1">País</label>
-          <select class="form-control" id="exampleSelect1">         
+          <label for="pais">País</label>
+          <select class="form-control" id="pais" formControlName="pais">         
             <option>Argentina</option>
             <option>Bolivia</option>
             <option>Brasil</option>
@@ -35,17 +34,19 @@
             <option>Perú</option>
           </select>
         </div>
+
+
         <fieldset class="form-group">
-          <legend></legend>
+
           <div class="form-check">
-            <label class="form-check-label">
-              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+            <label for ="newsletter" class="form-check-label" >
+              <input type="radio" class="form-check-input" name="newsletter" id="newsletter" value="recibir newsletter" formControlName="newsletter"checked>
               Deseo suscribirme al newsletter.
             </label>
           </div>
           <div class="form-check">
           <label class="form-check-label">
-              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+              <input type="radio" class="form-check-input" name="newsletter" id="newsletter2" value="no recibir newsletter" formControlName="newsletter">
               No deseo suscribirme al newsletter.
             </label>
           </div>
@@ -53,7 +54,11 @@
       
         
         <button type="submit" class="btn btn-primary">Enviar</button>
+        <button type="reset" class="btn btn-danger" [disabled]="form.pristine">Cancelar</button>
       </form>
 
+    <!--p> {{ form.value | json }} </p>
+    <p> {{ form.valid }}</p>
     </div>
-  </div>
+  </div-->
+  

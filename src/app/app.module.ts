@@ -19,6 +19,9 @@ import { FooterComponent } from './footer/footer.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { RegistroComponent } from './registro/registro.component';
 import { CommentsService } from './coments.service';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
 
 
 @NgModule({
@@ -40,7 +43,10 @@ import { CommentsService } from './coments.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpModule
+    HttpModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgbModule.forRoot()
   ],
   providers: [
     CommentsService,
