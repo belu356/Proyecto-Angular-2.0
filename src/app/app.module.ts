@@ -20,6 +20,7 @@ import { PaginationComponent } from './pagination/pagination.component';
 import { RegistroComponent } from './registro/registro.component';
 import { CommentsService } from './coments.service';
 
+
 @NgModule({
   declarations: [
     AppComponent,

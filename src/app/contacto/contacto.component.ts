@@ -12,5 +12,16 @@ export class ContactoComponent implements OnInit {
 
   ngOnInit() {
   }
+    
+onSubmit(form){
+  
+}
+}
 
+interface pesona{
+  nombre: string;
+  apellido: string;
+  email: string;
+  pais: string;
+  terminos:boolean;
 }
