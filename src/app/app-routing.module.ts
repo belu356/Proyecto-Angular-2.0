@@ -7,7 +7,6 @@ import {ContactoComponent} from './contacto/contacto.component';
 import {PostComponent} from './post/post.component';
 import {PortadaPostComponent} from './portada-post/portada-post.component';
 import {PostListComponent} from './post-list/post-list.component';
-import { RegistroComponent } from './registro/registro.component';
 
 
 const routes: Routes = [
@@ -16,8 +15,7 @@ const routes: Routes = [
   {path: 'personajedelmes', component:PortadaPostComponent},
   {path:'nosotros', component:NosotrosComponent},
   {path:'contacto', component:ContactoComponent},
-  {path: 'post', component: PostListComponent},
-  {path: 'registro', component:RegistroComponent}
+  {path: 'post', component: PostListComponent}
   
   
 ];

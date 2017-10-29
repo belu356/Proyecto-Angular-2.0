@@ -17,7 +17,6 @@ import { ComentsComponent } from './coments/coments.component';
 import { PostListComponent } from './post-list/post-list.component';
 import { FooterComponent } from './footer/footer.component';
 import { PaginationComponent } from './pagination/pagination.component';
-import { RegistroComponent } from './registro/registro.component';
 import { CommentsService } from './coments.service';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -37,8 +36,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     ComentsComponent,
     PostListComponent,
     FooterComponent,
-    PaginationComponent,
-    RegistroComponent
+    PaginationComponent
   ],
   imports: [
     BrowserModule,

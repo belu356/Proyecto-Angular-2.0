@@ -1,24 +1,21 @@
-<div class="row">
-   <div class="col-sm-8 posteos" *ngIf = "post">
-      <h2> {{ post.title }} </h2>
-      <p> {{ post.body }}</p>
-   </div>
-  <div class="col-sm-4"></div>
-  
-</div>
+    <div class= "row">
+        <div class="col-lg-10" *ngIf="post">
+            <h2 class="p_title"> {{ post.title }} </h2>
+            <p class="p_body"> {{ post.body }}</p>
+      </div>
+    </div>
 
-<div class="row comentarios">
-  <div class="col-sm-8">
-    <h3>Comentarios ({{comments.length}}) </h3>
-<div *ngFor="let comment of comments">
-  <strong>{{ comment.email }}</strong> Dijo: <br>
-  <h4>{{ comment.name }}</h4>
-  <p>{{ comment.body }}</p>
-</div>
+    
+    <div class="row col-md-8">
+          <h3>Comentarios ({{comments.length}}) </h3>
+          <div *ngFor="let comment of comments">
+            <strong>{{ comment.email }}</strong> Dijo: <br>
+            <h4>{{ comment.name }}</h4>
+            <p>{{ comment.body }}</p>
+      </div>
+    
 
-</div>
 
-<div *ngIf="!post">
-  oops
-</div>
+
+
 
