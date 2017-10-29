@@ -17,7 +17,7 @@ export class PostComponent implements OnInit {
   
           
     post:Post;
-    comments:Comments[];
+    comments:Array<any>;
     
   
     constructor(private postServicio: PostService,
@@ -36,10 +36,10 @@ export class PostComponent implements OnInit {
       });
 
      this.comment.getCommentsByPostId(id).subscribe(comments=>{
-       this.comments = comments.json();
-     }
-    
-      );
+       this.comments = comments,
+       error=> console.error('Error:' + error)
+      } );
+
     }
   }
   

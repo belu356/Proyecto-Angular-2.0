@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {PostListComponent} from '../post-list/post-list.component'
+import {PostService} from '../post.service';
+import { Post } from '../post';
 
 @Component({
   selector: 'app-pagination',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaginationComponent implements OnInit {
 
-  constructor() { }
+posts:Post[];
+  
+constructor(private postServicio: PostService) { }
 
   ngOnInit() {
-  }
+    this.postServicio.getPosts().subscribe(posts=>{
+    this.posts = posts;
+  });
 
+  }
 }
