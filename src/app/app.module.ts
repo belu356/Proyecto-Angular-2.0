@@ -20,8 +20,6 @@ import { PaginationComponent } from './pagination/pagination.component';
 import { CommentsService } from './coments.service';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { UserComponent } from './user/user.component';
-import { UserService } from './user.service';
 import {NgxPaginationModule} from 'ngx-pagination';
  
 
@@ -39,8 +37,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
     ComentsComponent,
     PostListComponent,
     FooterComponent,
-    PaginationComponent,
-    UserComponent
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +49,6 @@ import {NgxPaginationModule} from 'ngx-pagination';
     NgbModule.forRoot()
   ],
   providers: [
-    UserService,
     CommentsService,
     PostService,
     PortadaPostService
