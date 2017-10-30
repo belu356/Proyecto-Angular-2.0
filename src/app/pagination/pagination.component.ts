@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input} from "@angular/core";
 import {PostListComponent} from '../post-list/post-list.component'
 import {PostService} from '../post.service';
 import { Post } from '../post';
@@ -6,18 +6,10 @@ import { Post } from '../post';
 @Component({
   selector: 'app-pagination',
   templateUrl: './pagination.component.html',
-  styleUrls: ['./pagination.component.scss']
-})
-export class PaginationComponent implements OnInit {
-
-posts:Post[];
+  changeDetection: ChangeDetectionStrategy.OnPush
   
-constructor(private postServicio: PostService) { }
-
-  ngOnInit() {
-    this.postServicio.getPosts().subscribe(posts=>{
-    this.posts = posts;
-  });
-
-  }
+})
+export class PaginationComponent {
+  @Input('data') posts: string[] = [];
+  page: number = 1;
 }

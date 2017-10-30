@@ -8,14 +8,23 @@ import {Post} from '../post'
 })
 export class PostListComponent implements OnInit {
 
-  posts:Post[];
+  posts=[];
+  p:number = 1;
   
-  constructor(private postServicio: PostService) { }
+  
+  constructor(private postServicio: PostService) {
+    for(let i=1;i<=100;i++){
+  
+   }
+  }
 
   ngOnInit() {
     this.postServicio.getPosts().subscribe(posts =>{
       this.posts = posts;
     })
+  
+    }
   }
 
-}
+
+  

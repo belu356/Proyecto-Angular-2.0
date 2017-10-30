@@ -7,6 +7,7 @@ import {ContactoComponent} from './contacto/contacto.component';
 import {PostComponent} from './post/post.component';
 import {PortadaPostComponent} from './portada-post/portada-post.component';
 import {PostListComponent} from './post-list/post-list.component';
+import {UserComponent} from './user/user.component';
 
 
 const routes: Routes = [
