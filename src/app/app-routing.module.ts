@@ -7,8 +7,6 @@ import {RegistroComponent} from './registro/registro.component';
 import {PostComponent} from './post/post.component';
 import {PortadaPostComponent} from './portada-post/portada-post.component';
 import {PostListComponent} from './post-list/post-list.component';
-import {UserComponent} from './user/user.component';
-
 
 const routes: Routes = [
   {path:'', component:HomeComponent},
@@ -17,7 +15,6 @@ const routes: Routes = [
   {path:'nosotros', component:NosotrosComponent},
   {path:'registro', component:RegistroComponent},
   {path: 'post', component: PostListComponent},
-  {path: 'user', component: UserComponent}
   
   
 ];
