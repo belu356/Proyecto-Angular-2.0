@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder, FormGroup, FormControl,Validators} from '@angular/forms';
+
 
 @Component({
   selector: 'app-contacto',
@@ -7,18 +9,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactoComponent implements OnInit {
 
-    nombre: string;
-  constructor() { }
+  form:FormGroup;
+  
+  constructor( private fb: FormBuilder) {}
 
-  ngOnInit() {
-  }
+    private createForm(){
+      this.form=this.fb.group({
+        nombre: [null,[Validators.required,
+        Validators.minLength(3)
+      ]],
+        apellido:[null,Validators.required],
+        email: [null,[Validators.required,
+        Validators.minLength(6)]],
+
+        usuario:[null, Validators.required],
+        pais: [null],
+        newsletter:[false,Validators.required]
+
+
+      });
+    }
+
+  ngOnInit() {}
     
 onSubmit(form){
   
 }
 }
 
-interface pesona{
+interface form{
   nombre: string;
   apellido: string;
   email: string;
