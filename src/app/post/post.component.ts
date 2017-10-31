@@ -36,8 +36,7 @@ export class PostComponent implements OnInit {
       });
 
      this.comment.getCommentsByPostId(id).subscribe(comments=>{
-       this.comments = comments,
-       error=> console.error('Error:' + error)
+       this.comments = comments;
       } );
 
     }
