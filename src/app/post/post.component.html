@@ -7,7 +7,7 @@
 
     
     <div class="row col-md-8">
-          <h3>Comentarios ({{comments.length}}) </h3>
+          <h3>Comentarios ({{comments?.length}}) </h3>
           <div *ngFor="let comment of comments">
             <a href="">{{ comment.name }}</a>
             <p>{{ comment.body }}</p>

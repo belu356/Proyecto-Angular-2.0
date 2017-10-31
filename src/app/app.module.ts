@@ -7,7 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { PostComponent } from './post/post.component';
-import { ContactoComponent } from './contacto/contacto.component';
+import { RegistroComponent } from './registro/registro.component';
 import { PortadaComponent } from './portada/portada.component';
 import {PostService} from './post.service';
 import { HttpModule } from '@angular/http';
@@ -33,7 +33,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
     NavbarComponent,
     NosotrosComponent,
     PostComponent,
-    ContactoComponent,
+    RegistroComponent,
     PortadaComponent,
     PortadaPostComponent,
     ComentsComponent,
